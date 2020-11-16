@@ -24,7 +24,7 @@ public class Note {
 
     public void running(int seconds){
         Calendar stopTime = setTime(seconds);
-        while (Calendar.getInstance().toString() != stopTime.toString()){
+        while (Calendar.getInstance().before(stopTime)){
             try {
                 Thread.sleep(3000);
                 noting();
